@@ -21,6 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/<name>', home),
     path("", inicio),
-    path('homepage/', homePage),
     path("AppCoder/", include("AppCoder.urls"))
 ]
