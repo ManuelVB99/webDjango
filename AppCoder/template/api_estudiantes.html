@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios de Estudiantes</title>
+</head>
+<body>
+    <h1>Formulario de estudiante</h1>
+    {% if formulario.errors %}
+    <p style="color=rojo"> Estan mal los datos </p>
+    {%endif%}
+    <form method="POST"> {% csrf_token %}
+        <table>
+            {{formulario.as_table}}
+        </table>
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>
